@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+  <title>Home Loan EMI Calculator | EMI Calculator | Calculate EMI for Housing Loan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="title" content="Home Loan EMI Calculator | EMI Calculator | Calculate EMI for Housing Loan">
+  <link rel="stylesheet" href="css/range-slider.css" media="all">
+  <link rel="stylesheet" href="css/graph.css" media="all">
+  <script src="js/emi.js" defer=""></script>
+  <script type="application/json" data-drupal-selector="drupal-settings-json">
+		{"path": {}}
+    </script>
+  <style>
+    .rangeslider.rangeslider--horizontal+div {
+      display: none;
+    }
+  </style>
+</head>
+
+<body style="max-width: 900px;width: 100%;margin: auto;">
+  
+  <div class="calculator-wrapper">
+    <div id="emi-calculator" class="tab-pane active">
+      <div class="calculator-div emi-calculator">
+        <div class="range-data">
+          <div class="range-div">
+            <div class="range-content">
+              <div class="range-wrapper rupees-present tooltip-hide">
+                <label for="">Loan Amount In Rupee</label>
+                <div class="cont"> <span class="WebRupee"> ₹ </span> <input id="loan-amount-text-value" type="text" class="js-amount-input" value="2500000" min="100000" max="100000000"> <input id="loan-amount-slider-value" type="range" class="js-amount-range" value="2500000" min="100000" max="100000000"> </div>
+              </div>
+              <div class="range-wrapper tooltip-hide">
+                <label for="">Tenure (Years)</label>
+                <input id="tenure-text-value" type="text" class="js-amount-input" value="20" min="1" max="30" step="1">
+                <input id="tenure-slider-value" type="range" class="js-amount-range" value="20" min="1" max="30"
+                  step="1">
+              </div>
+              <div class="range-wrapper percentage-present">
+                <label for="">Interest Rate (% p.a.)</label> <span class="percentage-icon"></span>
+                <input id="interest-text-value" type="text" class="js-amount-input" value="7.50" min="0" max="15"
+                  style="padding-right: 17px;">
+                <input id="interest-slider-value" type="range" class="js-amount-range" step="0.01" value="7.50" min="0"
+                  max="15">
+              </div>
+            </div>
+          </div>
+          <div class="pie-div">
+            <div class="pie-wrapper">
+              <div class="pie-text">
+                <div class="pie-label emi-monthly">
+                  <label for="">Monthly Home Loan EMI</label>
+                  <div class="view-div"><span class="rupees-icon"><span class="WebRupee"><span class="WebRupee"><span
+                            class="WebRupee"><span class="WebRupee"> ₹ </span></span></span></span></span><span
+                      id="emi-monthly"></span></div>
+                </div>
+                <div class="pie-label"><label for="">Principal Amount </label>
+                  <div class="pie-arrow"></div><span class="rupees-icon"><span class="WebRupee"><span
+                        class="WebRupee"><span class="WebRupee"><span class="WebRupee"> ₹
+                          </span></span></span></span></span><span id="emi-pricipal-amount"></span>
+                </div>
+                <div class="pie-label">
+                  <label for="">Interest Amount </label>
+                  <div class="pie-arrow red-pie"></div><span class="rupees-icon"><span class="WebRupee"><span
+                        class="WebRupee"><span class="WebRupee"><span class="WebRupee"> ₹
+                          </span></span></span></span></span><span id="emi-interest-amount"></span>
+                </div>
+                <div class="pie-label">
+                  <label for="">Total Amount Payable</label><span class="rupees-icon"><span class="WebRupee"><span
+                        class="WebRupee"><span class="WebRupee"><span class="WebRupee"> ₹
+                          </span></span></span></span></span><span id="emi-total-amount-payable"></span>
+                </div>
+              </div>
+              <div id="pie-chart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
